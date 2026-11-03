@@ -1,4 +1,4 @@
-# LinkedIn UI Tests — IT3153 Assignment 04
+# LinkedIn UI Tests 
 
 Java + Maven + Selenium + TestNG. Uses Page Object Model (POM).
 Built for Java 17 or later; Java 21.0.7 and Maven 3.9.6 are suitable.
