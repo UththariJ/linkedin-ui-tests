@@ -1,0 +1,15 @@
+target/
+screenshots/
+recordings/
+.env
+.env.*
+!.env.example
+*.log
+*.jks
+*.p12
+*.pem
+*.key
+.idea/
+.vscode/settings.json
+.DS_Store
+Thumbs.db

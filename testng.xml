@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LinkedIn Assignment" verbose="1" parallel="none" thread-count="1">
+  <test name="UI tests"><classes>
+    <class name="lk.kdu.sqa.tests.LoginTest"/>
+    <class name="lk.kdu.sqa.tests.SearchTest"/>
+    <class name="lk.kdu.sqa.tests.SearchResultClickTest"/>
+  </classes></test>
+</suite>
