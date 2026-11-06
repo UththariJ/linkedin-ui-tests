@@ -1,12 +1,9 @@
 @echo off
 setlocal
-
-set "TEST_NAME=%~1"
-if "%TEST_NAME%"=="" (
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0run-tests.ps1"
+if "%~1"=="" (
+  call mvn test
 ) else (
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0run-tests.ps1" -Test "%TEST_NAME%"
+  call mvn test -Dtest=%~1
 )
-
 set "EXIT_CODE=%ERRORLEVEL%"
 endlocal & exit /b %EXIT_CODE%

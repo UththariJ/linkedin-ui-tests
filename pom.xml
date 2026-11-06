@@ -11,14 +11,12 @@
   <packaging>jar</packaging>
 
   <properties>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium.version>4.52.0</selenium.version>
     <testng.version>7.11.0</testng.version>
     <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>3.5.2</maven.surefire.plugin.version>
-    <manualLogin>false</manualLogin>
-    <keepBrowserOpen>false</keepBrowserOpen>
   </properties>
 
   <dependencies>
@@ -35,6 +33,14 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Provides Selenium's test-time SLF4J API with a simple console logger. -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.16</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -60,11 +66,6 @@
           </suiteXmlFiles>
           <useFile>true</useFile>
           <trimStackTrace>true</trimStackTrace>
-          <systemPropertyVariables>
-            <!-- Optional runtime controls; credentials are never stored here. -->
-            <manualLogin>${manualLogin}</manualLogin>
-            <keepBrowserOpen>${keepBrowserOpen}</keepBrowserOpen>
-          </systemPropertyVariables>
         </configuration>
       </plugin>
     </plugins>

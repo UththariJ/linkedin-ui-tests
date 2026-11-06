@@ -4,6 +4,8 @@ recordings/
 .env
 .env.*
 !.env.example
+src/test/resources/config.local.properties
+*credentials*
 *.log
 *.jks
 *.p12
