@@ -17,6 +17,7 @@
     <testng.version>7.11.0</testng.version>
     <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>3.5.2</maven.surefire.plugin.version>
+    <keepBrowserOpen>false</keepBrowserOpen>
   </properties>
 
   <dependencies>
@@ -66,6 +67,9 @@
           </suiteXmlFiles>
           <useFile>true</useFile>
           <trimStackTrace>true</trimStackTrace>
+          <systemPropertyVariables>
+            <keepBrowserOpen>${keepBrowserOpen}</keepBrowserOpen>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
     </plugins>

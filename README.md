@@ -59,6 +59,15 @@ mvn test -Dtest=LoginTest
 mvn test -Dtest=LoginTest#validLogin
 ```
 
+For temporary browser inspection only, keep Chrome open after cleanup:
+
+```powershell
+mvn test "-Dtest=LoginTest#validLogin" "-DkeepBrowserOpen=true"
+```
+
+Close that browser manually. Do not use `keepBrowserOpen` for the final demonstration;
+normal runs close every browser in `@AfterMethod`.
+
 If either credential variable is missing, the affected tests are skipped with a clear
 configuration message; no empty login is attempted. If LinkedIn displays a CAPTCHA or
 security check before the login form, including an image-selection challenge, the test

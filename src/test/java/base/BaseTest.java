@@ -34,20 +34,19 @@ public abstract class BaseTest {
         blockedReason = null;
         driver = null;
         if (environment("LINKEDIN_USERNAME") == null || environment("LINKEDIN_PASSWORD") == null) {
-            throw new SkipException(
-                "SKIPPED: Set LINKEDIN_USERNAME and LINKEDIN_PASSWORD in this PowerShell session " +
-                "before starting Maven.");
+            blockedReason = "SKIPPED: Set LINKEDIN_USERNAME and LINKEDIN_PASSWORD in this PowerShell " +
+                "session before starting Maven.";
+            return;
         }
         ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         options.addArguments("--incognito", "--start-maximized", "--lang=en-US");
+        if (Boolean.getBoolean("keepBrowserOpen")) {
+            options.setExperimentalOption("detach", true);
+        }
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        if (environment("LINKEDIN_USERNAME") == null || environment("LINKEDIN_PASSWORD") == null) {
-            blockedReason = "SKIPPED: LINKEDIN_USERNAME and LINKEDIN_PASSWORD are not configured.";
-            return;
-        }
         driver.get("https://www.linkedin.com/login");
         try {
             new WebDriverWait(driver, Duration.ofSeconds(10)).until(d ->
@@ -175,7 +174,9 @@ public abstract class BaseTest {
                             "Browser paused for inspection. Press ENTER here to close it.");
                         new java.util.Scanner(System.in).nextLine();
                     }
-                    driver.quit();
+                    if (!Boolean.getBoolean("keepBrowserOpen")) {
+                        driver.quit();
+                    }
                 } catch (WebDriverException cleanupFailure) {
                     System.err.println("Browser cleanup failed: " + cleanupFailure.getMessage());
                 } finally {
