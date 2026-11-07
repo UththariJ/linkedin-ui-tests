@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-# linkedin-ui-tests
-=======
-<<<<<<< HEAD
 # LinkedIn UI Tests - IT3153 Assignment 04
-=======
-# LinkedIn UI Tests 
->>>>>>> e43381e3a417d0c86e7b24e437da949c240e2230
 
 Minimal Java + Selenium WebDriver + TestNG automation using Page Object Model (POM).
 The project is configured for Windows, Java 21.0.7, Maven 3.9.6, and Google Chrome.
@@ -138,14 +131,15 @@ login security handling, dynamic elements/page changes, challenges and solutions
 the limits of automating a website not controlled by the tester. Include run results and
 at least one screenshot captured automatically by the code, after privacy review.
 
-| Test ID | Description | Steps | Expected result | Actual result | Pass/Fail/Blocked |
-|---|---|---|---|---|---|
-| TC01 | Valid login | Open login; submit own valid credentials | Authenticated feed/search is visible | Pending run | Pending |
-| TC02 | Invalid password | Submit own username and one dummy password | Visible incorrect-password error | Pending run | Pending |
-| TC03 | Search | Login; search `software testing`; press Enter | Search URL and visible actual result | Pending run | Pending |
-| TC04 | Click result | Login; search; capture and click first result | Opened page matches captured destination | Pending run | Pending |
+| Test ID | Description      | Steps                                         | Expected result                          | Actual result | Pass/Fail/Blocked |
+| ------- | ---------------- | --------------------------------------------- | ---------------------------------------- | ------------- | ----------------- |
+| TC01    | Valid login      | Open login; submit own valid credentials      | Authenticated feed/search is visible     | Pending run   | Pending           |
+| TC02    | Invalid password | Submit own username and one dummy password    | Visible incorrect-password error         | Pending run   | Pending           |
+| TC03    | Search           | Login; search `software testing`; press Enter | Search URL and visible actual result     | Pending run   | Pending           |
+| TC04    | Click result     | Login; search; capture and click first result | Opened page matches captured destination | Pending run   | Pending           |
 
 Use a private repository unless the instructor says otherwise. Before pushing, verify that
 credentials, personal information, screenshots, recordings, browser profiles, and `target\`
 are not included. The `.gitignore` excludes generated output and local credential files.
->>>>>>> master
+
+> > > > > > > master
