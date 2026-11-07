@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [LinkedIn Assignment]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" name="UI tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.SearchTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="searchShowsResults"/>
+        </methods>
+      </class> <!-- tests.SearchTest -->
+      <class name="tests.SearchResultClickTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="clickFirstSearchResult"/>
+        </methods>
+      </class> <!-- tests.SearchResultClickTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validLogin"/>
+          <include name="invalidPassword"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- UI tests(failed) -->
+</suite> <!-- Failed suite [LinkedIn Assignment] -->

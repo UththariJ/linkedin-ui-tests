@@ -1,0 +1,7 @@
+base\BaseTest.class
+tests\SearchTest.class
+tests\SearchResultClickTest.class
+pages\LoginPage.class
+pages\HomePage.class
+pages\SearchResultsPage.class
+tests\LoginTest.class
