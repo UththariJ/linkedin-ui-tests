@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # LinkedIn UI Tests - IT3153 Assignment 04
+=======
+# LinkedIn UI Tests 
+>>>>>>> e43381e3a417d0c86e7b24e437da949c240e2230
 
 Minimal Java + Selenium WebDriver + TestNG automation using Page Object Model (POM).
 The project is configured for Windows, Java 21.0.7, Maven 3.9.6, and Google Chrome.
